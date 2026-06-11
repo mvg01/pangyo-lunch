@@ -1,0 +1,12 @@
+subscriptions:
+  - name: "바른밥상"
+    keywords: ["바른밥상", "바른 밥상"]
+  - name: "엄니한식뷔페"
+    keywords: ["엄니한식", "엄니 한식"]
+  - name: "해담가"
+    keywords: ["해담가"]
+  - name: "정겨운맛풍경"
+    keywords: ["정겨운맛풍경", "정겨운 맛풍경"]
+slack_webhook_env: "SLACK_WEBHOOK_URL"
+cafe:
+  board_url: "https://cafe.naver.com/f-e/cafes/30487307/menus/26?viewType=L"
