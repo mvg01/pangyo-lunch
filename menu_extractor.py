@@ -19,9 +19,9 @@ class MenuBoardAnalysis(BaseModel):
     is_menu_board: bool = Field(description="True if the image contains a lunch menu board/plate or written menu, False otherwise.")
     restaurant_name_on_image: Optional[str] = Field(None, description="The name of the restaurant as visible in the image.")
     date_on_image: Optional[str] = Field(None, description="The date shown on the menu board.")
-    menus: List[str] = Field(default_factory=list, description="List of menu items parsed from the image.")
+    menus: List[str] = Field(description="List of menu items parsed from the image.")
     price: Optional[str] = Field(None, description="Price of the meal if visible on the image.")
-    uncertain_items: List[str] = Field(default_factory=list, description="Items that were blurry or hard to read.")
+    uncertain_items: List[str] = Field(description="Items that were blurry or hard to read.")
     notes: Optional[str] = Field(None, description="Any notes, holiday announcements, or special notices.")
 
 def extract_menu_from_image(image_path: str, restaurant_name: str, use_mock: bool = True) -> dict:
