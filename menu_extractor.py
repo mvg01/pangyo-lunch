@@ -1,106 +1,102 @@
 import os
 import json
 import logging
-from typing import List, Optional
-from pydantic import BaseModel, Field
 
 logger = logging.getLogger(__name__)
 
-# Try to import google-generativeai, but allow fallback for Phase 1 tests
 try:
-    import google.generativeai as genai
-    GEMINI_AVAILABLE = True
+    import easyocr
+    EASYOCR_AVAILABLE = True
 except ImportError:
-    GEMINI_AVAILABLE = False
-    logger.warning("google-generativeai package not available. Real API calls will fail.")
+    EASYOCR_AVAILABLE = False
+    logger.warning("easyocr not available.")
 
-# Define response schema using Pydantic
-class MenuBoardAnalysis(BaseModel):
-    is_menu_board: bool = Field(description="True if the image contains a lunch menu board/plate or written menu, False otherwise.")
-    restaurant_name_on_image: Optional[str] = Field(None, description="The name of the restaurant as visible in the image.")
-    date_on_image: Optional[str] = Field(None, description="The date shown on the menu board.")
-    menus: List[str] = Field(description="List of menu items parsed from the image.")
-    price: Optional[str] = Field(None, description="Price of the meal if visible on the image.")
-    uncertain_items: List[str] = Field(description="Items that were blurry or hard to read.")
-    notes: Optional[str] = Field(None, description="Any notes, holiday announcements, or special notices.")
+try:
+    from groq import Groq
+    GROQ_AVAILABLE = True
+except ImportError:
+    GROQ_AVAILABLE = False
+    logger.warning("groq not available.")
 
-def extract_menu_from_image(image_path: str, restaurant_name: str, use_mock: bool = True) -> dict:
-    """
-    Extracts menu from a local image file.
-    If use_mock is True or Gemini API key is missing, returns mock data.
-    """
-    api_key = os.environ.get("GEMINI_API_KEY")
-    
-    if use_mock or not api_key or not GEMINI_AVAILABLE:
-        logger.info(f"Running extract_menu_from_image in Mock mode for {restaurant_name}.")
+_ocr_reader = None
+
+def _get_reader():
+    global _ocr_reader
+    if _ocr_reader is None:
+        logger.info("Initializing EasyOCR (Korean + English)...")
+        _ocr_reader = easyocr.Reader(['ko', 'en'], gpu=False, verbose=False)
+    return _ocr_reader
+
+
+def extract_menu_from_image(image_paths, restaurant_name: str, use_mock: bool = True) -> dict:
+    """image_paths는 단일 경로(str) 또는 경로 리스트를 모두 허용."""
+    if isinstance(image_paths, str):
+        image_paths = [image_paths]
+
+    api_key = os.environ.get("GROQ_API_KEY")
+
+    if use_mock or not api_key or not EASYOCR_AVAILABLE or not GROQ_AVAILABLE:
+        logger.info(f"Mock mode for {restaurant_name}.")
         return get_mock_menu_response(restaurant_name)
-        
+
     try:
-        genai.configure(api_key=api_key)
-        # Using gemini-1.5-flash as the cost-efficient/free tier model
-        model = genai.GenerativeModel(
-            model_name="gemini-1.5-flash",
-            system_instruction="You are an expert OCR and menu analysis assistant. Analyze the uploaded image and extract the menu information."
+        # Step 1: 모든 이미지에서 OCR 텍스트 추출 후 합치기
+        reader = _get_reader()
+        all_texts = []
+        for idx, image_path in enumerate(image_paths):
+            results = reader.readtext(image_path)
+            text = '\n'.join([t for _, t, conf in results if conf > 0.3])
+            if text.strip():
+                all_texts.append(text)
+                logger.info(f"OCR image {idx+1}/{len(image_paths)}: {len(text)} chars")
+
+        raw_text = '\n---\n'.join(all_texts)
+
+        if not raw_text.strip():
+            logger.warning(f"No text extracted from any image for {restaurant_name}")
+            return {"menus": [], "price": None, "notes": "이미지 텍스트 인식 실패"}
+
+        logger.info(f"OCR extracted text ({len(raw_text)} chars) for {restaurant_name}")
+
+        # Step 2: Groq(Llama)로 메뉴 파싱
+        client = Groq(api_key=api_key)
+        prompt = (
+            f"다음은 '{restaurant_name}' 식당 점심 메뉴판 이미지를 OCR로 읽은 텍스트야:\n\n"
+            f"{raw_text}\n\n"
+            "위 텍스트에서 오늘의 점심 메뉴 항목과 가격을 추출해서 아래 JSON 형식으로만 응답해:\n"
+            '{"menus": ["메뉴1", "메뉴2", ...], "price": "가격 (없으면 null)", "notes": "특이사항 (없으면 null)"}\n'
+            "메뉴 항목만 리스트에 넣고 식당명, 날짜, 기타 불필요한 텍스트는 제외해."
         )
-        
-        # Load image file
-        with open(image_path, "rb") as f:
-            image_data = f.read()
-            
-        # Prepare content
-        prompt = f"Extract the lunch menu details from this image. The restaurant is believed to be '{restaurant_name}'."
-        image_part = {
-            "mime_type": "image/jpeg",
-            "data": image_data
-        }
-        
-        # API call with structured output
-        response = model.generate_content(
-            contents=[prompt, image_part],
-            generation_config=genai.GenerationConfig(
-                response_mime_type="application/json",
-                response_schema=MenuBoardAnalysis,
-                temperature=0.1
-            )
+
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            response_format={"type": "json_object"},
+            temperature=0.1,
         )
-        
-        result_dict = json.loads(response.text)
-        logger.info(f"Successfully extracted menu from image: {result_dict}")
-        return result_dict
-        
+
+        result = json.loads(response.choices[0].message.content)
+        logger.info(f"Groq parsed menu for {restaurant_name}: {result}")
+        return result
+
     except Exception as e:
-        logger.error(f"Error during Gemini API call: {e}")
-        # Return fallback non-menu dict
-        return {
-            "is_menu_board": False,
-            "restaurant_name_on_image": None,
-            "date_on_image": None,
-            "menus": [],
-            "price": None,
-            "uncertain_items": [],
-            "notes": f"Error: {str(e)}"
-        }
+        logger.error(f"Error during menu extraction for {restaurant_name}: {e}")
+        return {"menus": [], "price": None, "notes": f"추출 오류: {str(e)[:200]}"}
+
 
 def get_mock_menu_response(restaurant_name: str) -> dict:
-    """Returns realistic mock menus based on the restaurant name."""
     import datetime
     today_str = datetime.date.today().strftime("%m월 %d일")
-    
+
     mock_menus = {
-        "바른밥상": ["돈까스", "생선까스", "쫄면", "겉절이", "된장국", "단무지무침"],
-        "엄니한식뷔페": ["양념제육볶음", "계란말이", "콩나물무침", "포기김치", "시래기된장국", "쌈채소"],
-        "해담가": ["고등어구이", "간장불고기", "도토리묵무침", "열무김치", "미역국", "흰밥"],
-        "정겨운맛풍경": ["오징어볶음", "동그랑땡전", "고사리나물", "깍두기", "감자수제비국", "잡곡밥"]
+        "바른밥상": ["돈까스", "생선까스", "쫄면", "겉절이", "된장국"],
+        "엄니한식뷔페": ["양념제육볶음", "계란말이", "콩나물무침", "시래기된장국"],
+        "해담가": ["고등어구이", "간장불고기", "도토리묵무침", "미역국"],
+        "정겨운맛풍경": ["오징어볶음", "동그랑땡전", "고사리나물", "감자수제비국"],
     }
-    
-    menus = mock_menus.get(restaurant_name, ["수제돈까스", "감자튀김", "양배추샐러드", "크림스프"])
-    
+
     return {
-        "is_menu_board": True,
-        "restaurant_name_on_image": restaurant_name,
-        "date_on_image": today_str,
-        "menus": menus,
+        "menus": mock_menus.get(restaurant_name, ["오늘의 메뉴"]),
         "price": "9,000원",
-        "uncertain_items": [],
-        "notes": "국산 돼지고기 사용"
+        "notes": None,
     }

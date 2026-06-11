@@ -39,6 +39,12 @@ jobs:
       - name: Install Playwright browsers
         run: playwright install chromium
 
+      - name: Cache EasyOCR models
+        uses: actions/cache@v4
+        with:
+          path: ~/.EasyOCR
+          key: easyocr-models-ko-en-v1
+
       - name: Determine execution arguments
         id: args
         run: |
@@ -54,7 +60,7 @@ jobs:
 
       - name: Run lunch bot
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           python main.py ${{ steps.args.outputs.last_run_arg }}
 

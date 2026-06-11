@@ -3,6 +3,8 @@ import argparse
 import yaml
 import logging
 from datetime import date, datetime
+from dotenv import load_dotenv
+load_dotenv()
 import state
 import crawler
 import menu_extractor
@@ -98,7 +100,7 @@ def run_pipeline(args):
 
         if local_images:
             menu_data = menu_extractor.extract_menu_from_image(
-                local_images[0],
+                local_images,
                 restaurant,
                 use_mock=args.mock,
             )
@@ -135,8 +137,8 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if not os.environ.get("GEMINI_API_KEY"):
-        logger.info("GEMINI_API_KEY not set. Defaulting --mock to True.")
+    if not os.environ.get("GROQ_API_KEY"):
+        logger.info("GROQ_API_KEY not set. Defaulting --mock to True.")
         args.mock = True
 
     run_pipeline(args)
