@@ -1,0 +1,22 @@
+{
+  "2026-06-11": {
+    "바른밥상": {
+      "menus": [],
+      "price": null,
+      "notes": "Error: Unknown field for Schema: default",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5012"
+    },
+    "해담가": {
+      "menus": [],
+      "price": null,
+      "notes": "Error: Unknown field for Schema: default",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5011"
+    },
+    "정겨운맛풍경": {
+      "menus": [],
+      "price": null,
+      "notes": "Error: Unknown field for Schema: default",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5010"
+    }
+  }
+}
