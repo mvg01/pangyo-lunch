@@ -115,10 +115,17 @@ def _build_card(r: dict) -> str:
         menu_html = f'<ul class="menu-list">{items}</ul>'
 
         meta_parts = []
-        if r["price"]:
-            meta_parts.append(f"가격: {r['price']}")
-        if r["notes"]:
-            meta_parts.append(r["notes"])
+        price_val = r.get("price")
+        if price_val:
+            if isinstance(price_val, dict):
+                price_str = " / ".join(f"{k} {v}" for k, v in price_val.items())
+            else:
+                price_str = str(price_val)
+            meta_parts.append(f"가격: {price_str}")
+        notes_val = r.get("notes")
+        if notes_val:
+            notes_str = str(notes_val) if not isinstance(notes_val, str) else notes_val
+            meta_parts.append(notes_str)
         meta_html = f'<p class="card-meta">{" &nbsp;|&nbsp; ".join(meta_parts)}</p>' if meta_parts else ""
 
         link_html = ""
