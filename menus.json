@@ -507,5 +507,28 @@
       "notes": null,
       "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5057"
     }
+  },
+  "2026-06-25": {
+    "바른밥상": {
+      "menus": [],
+      "price": null,
+      "notes": null,
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5063"
+    },
+    "정겨운맛풍경": {
+      "menus": [
+        "햄김치볶음밥",
+        "오이 미역냉국",
+        "목살소금구이&상추씩",
+        "계란후라이",
+        "매름 두부조림",
+        "과일사라다",
+        "포기김치",
+        "내실차&식혜"
+      ],
+      "price": null,
+      "notes": "현금으로 식권구매시 10장+1장서비스= 90,000원, 20장+3장서비스= 180,000원",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5062"
+    }
   }
 }
