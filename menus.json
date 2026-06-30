@@ -1,46 +1,4 @@
 {
-  "2026-06-15": {
-    "정겨운맛풍경": {
-      "menus": [],
-      "price": null,
-      "notes": null,
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5024"
-    },
-    "바른밥상": {
-      "menus": [
-        "백미밥/후미밥",
-        "참치김치찌개",
-        "바싹 새우까스타르타르소스",
-        "감자채행복음",
-        "미억해초무침",
-        "숙주나물",
-        "쌍무",
-        "배추김치"
-      ],
-      "price": null,
-      "notes": "포장 가능합니다. 매일 신선한 재료로 조리합니다. 재료 소진 시 메뉴가 변경될 수 있습니다.",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5023"
-    },
-    "해담가": {
-      "menus": [
-        "김치 전",
-        "군만두와 양념장",
-        "알배추 쌍",
-        "대파 육개장",
-        "멸치 볶음",
-        "무말랗이 무침",
-        "궁채장아찌",
-        "배추김치",
-        "양배추 설러드",
-        "모냥방과 땅콩생크림",
-        "매실차",
-        "단백질 미슷가루"
-      ],
-      "price": null,
-      "notes": null,
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5022"
-    }
-  },
   "2026-06-16": {
     "바른밥상": {
       "menus": [
@@ -531,6 +489,52 @@
       "price": null,
       "notes": null,
       "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5073"
+    }
+  },
+  "2026-06-30": {
+    "정겨운맛풍경": {
+      "menus": [],
+      "price": null,
+      "notes": null,
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5081"
+    },
+    "해담가": {
+      "menus": [
+        "김치 전",
+        "안동 짐닭",
+        "소떡 강정",
+        "치커리 유자청 무침",
+        "고기 해물 잠빛탕",
+        "백미밥",
+        "혹미밥",
+        "고기 해물 잠방탕",
+        "뼈쥐포 고추장 볶음",
+        "검은콩 조림",
+        "궁채장아찌",
+        "배추김치",
+        "양배추 설러드",
+        "보리차",
+        "옥수수차",
+        "단백질 미슷가루"
+      ],
+      "price": null,
+      "notes": null,
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5080"
+    },
+    "바른밥상": {
+      "menus": [
+        "사골끔탕(국수사리)",
+        "돼지불고기야채북음",
+        "군만뒤 초간장",
+        "취나물두부무침",
+        "새송이맛실볶음",
+        "다시마야채무침",
+        "컴수박",
+        "꽉두기"
+      ],
+      "price": null,
+      "notes": "포장 가능, 매일 신선한 재료로 조리, 재료 소진 시 메뉴 변경 가능",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5079"
     }
   }
 }
