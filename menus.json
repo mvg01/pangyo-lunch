@@ -1,36 +1,4 @@
 {
-  "2026-08-04": {
-    "해담가": {
-      "menus": [],
-      "price": null,
-      "notes": null,
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5219"
-    },
-    "정겨운맛풍경": {
-      "menus": [
-        "미역 오이냉국",
-        "고추마요 순살치키소스",
-        "평이맛살전",
-        "초간장",
-        "통그럴소시지볶음",
-        "매름 두부조림",
-        "포기김치",
-        "아이스매실차&식혜"
-      ],
-      "price": {
-        "10장": "90,000원",
-        "20장": "180,000원"
-      },
-      "notes": {
-        "1장당 약": {
-          "10장": "8,180원",
-          "20장": "7,830원"
-        },
-        "서비스": "10장+1장, 20장+3장"
-      },
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5218"
-    }
-  },
   "2026-08-05": {
     "정겨운맛풍경": {
       "menus": [],
@@ -425,6 +393,20 @@
       "price": null,
       "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
       "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5272"
+    }
+  },
+  "2026-08-19": {
+    "바른밥상": {
+      "menus": [],
+      "price": null,
+      "notes": null,
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5279"
+    },
+    "정겨운맛풍경": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5277"
     }
   }
 }
