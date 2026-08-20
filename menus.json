@@ -1,53 +1,4 @@
 {
-  "2026-08-05": {
-    "정겨운맛풍경": {
-      "menus": [],
-      "price": null,
-      "notes": null,
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5226"
-    },
-    "바른밥상": {
-      "menus": [
-        "백미밥",
-        "오리훈제",
-        "부주양파무침",
-        "비엔나어옮기름떡볶이",
-        "도토리묵야채무침",
-        "건파래쪽파무침",
-        "치커리야채걸적이",
-        "양념껏임지",
-        "각두기",
-        "달콩 망괴파파야 슬러시"
-      ],
-      "price": "7,728원",
-      "notes": "라면추가 1,000원",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5225"
-    },
-    "해담가": {
-      "menus": [
-        "감자전",
-        "돈까스와 수제소스",
-        "카례 소스",
-        "도토리묵과 양념장",
-        "홍합 미역국",
-        "백미밥",
-        "혹미밥",
-        "건취나물 무침",
-        "그린반 느타리 볶음",
-        "무말램이 무침",
-        "배추김치",
-        "양배추 실러드",
-        "달콩 토마토",
-        "보리차",
-        "옥수수차",
-        "단백질 미슷가루",
-        "누둥지"
-      ],
-      "price": null,
-      "notes": null,
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5224"
-    }
-  },
   "2026-08-06": {
     "바른밥상": {
       "menus": [],
@@ -407,6 +358,26 @@
       "price": null,
       "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
       "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5277"
+    }
+  },
+  "2026-08-20": {
+    "바른밥상": {
+      "menus": [],
+      "price": null,
+      "notes": null,
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5288"
+    },
+    "해담가": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5287"
+    },
+    "정겨운맛풍경": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5286"
     }
   }
 }
