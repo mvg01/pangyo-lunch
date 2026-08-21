@@ -1,49 +1,4 @@
 {
-  "2026-08-06": {
-    "바른밥상": {
-      "menus": [],
-      "price": null,
-      "notes": null,
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5232"
-    },
-    "해담가": {
-      "menus": [
-        "부추전",
-        "메름 돈갈비조림",
-        "간장 돈갈비조림",
-        "교자만두와 초간장 / 어향가지 볶음",
-        "배추 된장국",
-        "백미밥",
-        "혹미밥",
-        "도라지 오이 무침",
-        "어향가지 볶음",
-        "산 고추지",
-        "배추김치",
-        "양배추 설러드",
-        "치즈 & 치즈빵",
-        "단백질 미슷가루",
-        "누둥지"
-      ],
-      "price": null,
-      "notes": null,
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5231"
-    },
-    "정겨운맛풍경": {
-      "menus": [
-        "새우 애호박채전/초간장",
-        "유니 짜장면",
-        "중화군만두뒤김",
-        "유니짜장소스",
-        "중화면",
-        "브로콜리 드거무침",
-        "포기김치",
-        "가이스매실- &식혜"
-      ],
-      "price": "90,000원 (10장+1장서비스), 180,000원 (20장+3장서비스), 9,000원 (식대)",
-      "notes": "현금으로 식권구매시 서비스 제공, 수급상황에 따라 메뉴 변경 가능",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5230"
-    }
-  },
   "2026-08-07": {
     "바른밥상": {
       "menus": [],
@@ -378,6 +333,20 @@
       "price": null,
       "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
       "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5286"
+    }
+  },
+  "2026-08-21": {
+    "바른밥상": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5298"
+    },
+    "정겨운맛풍경": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5297"
     }
   }
 }
