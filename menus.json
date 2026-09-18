@@ -1,24 +1,4 @@
 {
-  "2026-09-03": {
-    "바른밥상": {
-      "menus": [],
-      "price": null,
-      "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5368"
-    },
-    "정겨운맛풍경": {
-      "menus": [],
-      "price": null,
-      "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5367"
-    },
-    "해담가": {
-      "menus": [],
-      "price": null,
-      "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5366"
-    }
-  },
   "2026-09-04": {
     "엄니한식뷔페": {
       "menus": [],
@@ -229,6 +209,32 @@
       "price": null,
       "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
       "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5443"
+    }
+  },
+  "2026-09-18": {
+    "정겨운맛풍경": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5455"
+    },
+    "엄니한식뷔페": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5456"
+    },
+    "해담가": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5452"
+    },
+    "바른밥상": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5451"
     }
   }
 }
