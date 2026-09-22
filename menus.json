@@ -1,24 +1,4 @@
 {
-  "2026-09-07": {
-    "해담가": {
-      "menus": [],
-      "price": null,
-      "notes": null,
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5387"
-    },
-    "바른밥상": {
-      "menus": [],
-      "price": null,
-      "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5386"
-    },
-    "정겨운맛풍경": {
-      "menus": [],
-      "price": null,
-      "notes": "추출 오류: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5385"
-    }
-  },
   "2026-09-08": {
     "바른밥상": {
       "menus": [],
@@ -229,6 +209,26 @@
       "price": null,
       "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
       "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5464"
+    }
+  },
+  "2026-09-22": {
+    "해담가": {
+      "menus": [],
+      "price": null,
+      "notes": null,
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5475"
+    },
+    "정겨운맛풍경": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5472"
+    },
+    "바른밥상": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5473"
     }
   }
 }
