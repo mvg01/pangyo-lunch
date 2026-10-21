@@ -1,30 +1,4 @@
 {
-  "2026-10-06": {
-    "엄니한식뷔페": {
-      "menus": [],
-      "price": null,
-      "notes": null,
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5537"
-    },
-    "바른밥상": {
-      "menus": [],
-      "price": null,
-      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5535"
-    },
-    "해담가": {
-      "menus": [],
-      "price": null,
-      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5534"
-    },
-    "정겨운맛풍경": {
-      "menus": [],
-      "price": null,
-      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5531"
-    }
-  },
   "2026-10-07": {
     "엄니한식뷔페": {
       "menus": [],
@@ -215,6 +189,26 @@
       "price": null,
       "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
       "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5607"
+    }
+  },
+  "2026-10-21": {
+    "바른밥상": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5618"
+    },
+    "해담가": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5617"
+    },
+    "정겨운맛풍경": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5616"
     }
   }
 }
