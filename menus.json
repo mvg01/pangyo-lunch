@@ -1,24 +1,4 @@
 {
-  "2026-10-13": {
-    "바른밥상": {
-      "menus": [],
-      "price": null,
-      "notes": null,
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5571"
-    },
-    "정겨운맛풍경": {
-      "menus": [],
-      "price": null,
-      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5570"
-    },
-    "해담가": {
-      "menus": [],
-      "price": null,
-      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
-      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5568"
-    }
-  },
   "2026-10-14": {
     "정겨운맛풍경": {
       "menus": [],
@@ -223,6 +203,26 @@
       "price": null,
       "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
       "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5644"
+    }
+  },
+  "2026-10-28": {
+    "바른밥상": {
+      "menus": [],
+      "price": null,
+      "notes": null,
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5654"
+    },
+    "정겨운맛풍경": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5652"
+    },
+    "해담가": {
+      "menus": [],
+      "price": null,
+      "notes": "추출 오류: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'expired_api_key'}}",
+      "post_link": "https://cafe.naver.com/f-e/cafes/30487307/articles/5651"
     }
   }
 }
